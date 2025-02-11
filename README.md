@@ -1,8 +1,8 @@
 # F5-TTS: A Fairytaler that Fakes Fluent and Faithful Speech with Flow Matching
 
-[![python](https://img.shields.io/badge/Python-3.10-brightgreen)](https://github.com/SWivid/F5-TTS)
+[![python](https://img.shields.io/badge/Python-3.10-brightgreen)](https://github.com/Mazharqwe/F5-TTS)
 [![arXiv](https://img.shields.io/badge/arXiv-2410.06885-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2410.06885)
-[![demo](https://img.shields.io/badge/GitHub-Demo%20page-orange.svg)](https://swivid.github.io/F5-TTS/)
+[![demo](https://img.shields.io/badge/GitHub-Demo%20page-orange.svg)](https://Mazharqwe.github.io/F5-TTS/)
 [![hfspace](https://img.shields.io/badge/🤗-Space%20demo-yellow)](https://huggingface.co/spaces/mrfakename/E2-F5-TTS)
 [![msspace](https://img.shields.io/badge/🤖-Space%20demo-blue)](https://modelscope.cn/studios/modelscope/E2-F5-TTS)
 [![lab](https://img.shields.io/badge/X--LANCE-Lab-grey?labelColor=lightgrey)](https://x-lance.sjtu.edu.cn/)
@@ -18,7 +18,7 @@
 ### Thanks to all the contributors !
 
 ## News
-- **2024/10/08**: F5-TTS & E2 TTS base models on [🤗 Hugging Face](https://huggingface.co/SWivid/F5-TTS), [🤖 Model Scope](https://www.modelscope.cn/models/SWivid/F5-TTS_Emilia-ZH-EN), [🟣 Wisemodel](https://wisemodel.cn/models/SJTU_X-LANCE/F5-TTS_Emilia-ZH-EN).
+- **2024/10/08**: F5-TTS & E2 TTS base models on [🤗 Hugging Face](https://huggingface.co/Mazharqwe/F5-TTS), [🤖 Model Scope](https://www.modelscope.cn/models/Mazharqwe/F5-TTS_Emilia-ZH-EN), [🟣 Wisemodel](https://wisemodel.cn/models/SJTU_X-LANCE/F5-TTS_Emilia-ZH-EN).
 
 ## Installation
 
@@ -43,13 +43,13 @@ Then you can choose from a few options below:
 ### 1. As a pip package (if just for inference)
 
 ```bash
-pip install git+https://github.com/SWivid/F5-TTS.git
+pip install git+https://github.com/Mazharqwe/F5-TTS.git
 ```
 
 ### 2. Local editable (if also do training, finetuning)
 
 ```bash
-git clone https://github.com/SWivid/F5-TTS.git
+git clone https://github.com/Mazharqwe/F5-TTS.git
 cd F5-TTS
 # git submodule update --init --recursive  # (optional, if need bigvgan)
 pip install -e .
@@ -61,7 +61,7 @@ pip install -e .
 docker build -t f5tts:v1 .
 
 # Or pull from GitHub Container Registry
-docker pull ghcr.io/swivid/f5-tts:main
+docker pull ghcr.io/Mazharqwe/f5-tts:main
 ```
 
 
@@ -110,7 +110,7 @@ f5-tts_infer-cli -c src/f5_tts/infer/examples/multi/story.toml
 ### 3. More instructions
 
 - In order to have better generation results, take a moment to read [detailed guidance](src/f5_tts/infer).
-- The [Issues](https://github.com/SWivid/F5-TTS/issues?q=is%3Aissue) are very useful, please try to find the solution by properly searching the keywords of problem encountered. If no answer found, then feel free to open an issue.
+- The [Issues](https://github.com/Mazharqwe/F5-TTS/issues?q=is%3Aissue) are very useful, please try to find the solution by properly searching the keywords of problem encountered. If no answer found, then feel free to open an issue.
 
 
 ## Training
