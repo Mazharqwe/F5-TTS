@@ -720,12 +720,12 @@ with gr.Blocks() as app:
     gr.Markdown(
         """
 
-The checkpoints currently support English and Chinese.
+        The checkpoints currently support English and Chinese.
 
-If you're having issues, try converting your reference audio to WAV or MP3, clipping it to 15s with  ✂  in the bottom right corner (otherwise might have non-optimal auto-trimmed result).
+        If you're having issues, try converting your reference audio to WAV or MP3, clipping it to 15s with  ✂  in the bottom right corner (otherwise might have non-optimal auto-trimmed result).
 
-**NOTE:  For best results, keep your reference clips short (<15s). Ensure the audio is fully uploaded before generating.**
-"""
+        **NOTE:  For best results, keep your reference clips short (<15s). Ensure the audio is fully uploaded before generating.**
+        """
     )
 
     last_used_custom = files("f5_tts").joinpath("infer/.cache/last_used_custom_model_info.txt")
@@ -764,11 +764,11 @@ If you're having issues, try converting your reference audio to WAV or MP3, clip
     with gr.Row():
         if not USING_SPACES:
             choose_tts_model = gr.Radio(
-                choices=[DEFAULT_TTS_MODEL"], label="Choose TTS Model", value=DEFAULT_TTS_MODEL
+                choices=[DEFAULT_TTS_MODEL], label="Choose TTS Model", value=DEFAULT_TTS_MODEL
             )
         else:
             choose_tts_model = gr.Radio(
-                choices=[DEFAULT_TTS_MODEL"], label="Choose TTS Model", value=DEFAULT_TTS_MODEL
+                choices=[DEFAULT_TTS_MODEL], label="Choose TTS Model", value=DEFAULT_TTS_MODEL
             )
         custom_ckpt_path = gr.Dropdown(
             choices=[DEFAULT_TTS_MODEL_CFG[0]],
