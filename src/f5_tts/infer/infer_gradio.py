@@ -719,12 +719,17 @@ Have a conversation with an AI using your reference voice!
 with gr.Blocks() as app:
     gr.Markdown(
         """
+        # Jam Mazhar
 
         The checkpoints currently support English and Chinese.
 
-        If you're having issues, try converting your reference audio to WAV or MP3, clipping it to 15s with  ✂  in the bottom right corner (otherwise might have non-optimal auto-trimmed result).
+        If you're having issues, try converting your reference audio to WAV or MP3, clipping it to 15s with ✂ in the bottom right corner (otherwise might have non-optimal auto-trimmed result).
 
         **NOTE:  For best results, keep your reference clips short (<15s). Ensure the audio is fully uploaded before generating.**
+
+        **Contact:**
+        - Phone: +923056797489
+        - WhatsApp: +923056797489
         """
     )
 
