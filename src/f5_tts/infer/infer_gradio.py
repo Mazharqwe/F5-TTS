@@ -766,7 +766,7 @@ with gr.Blocks() as app:
             choose_tts_model = gr.Radio(
                 choices=[DEFAULT_TTS_MODEL], label="Choose TTS Model", value=DEFAULT_TTS_MODEL
             )
-        else:
+        else:  
             choose_tts_model = gr.Radio(
                 choices=[DEFAULT_TTS_MODEL], label="Choose TTS Model", value=DEFAULT_TTS_MODEL
             )
