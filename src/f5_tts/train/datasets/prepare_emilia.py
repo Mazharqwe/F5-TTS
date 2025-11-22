@@ -7,20 +7,18 @@
 import os
 import sys
 
+
 sys.path.append(os.getcwd())
 
 import json
 from concurrent.futures import ProcessPoolExecutor
 from importlib.resources import files
 from pathlib import Path
-from tqdm import tqdm
 
 from datasets.arrow_writer import ArrowWriter
+from tqdm import tqdm
 
-from f5_tts.model.utils import (
-    repetition_found,
-    convert_char_to_pinyin,
-)
+from f5_tts.model.utils import convert_char_to_pinyin, repetition_found
 
 
 out_zh = {
@@ -183,6 +181,7 @@ def main():
     with ArrowWriter(path=f"{save_dir}/raw.arrow") as writer:
         for line in tqdm(result, desc="Writing to raw.arrow ..."):
             writer.write(line)
+        writer.finalize()
 
     # dup a json separately saving duration in case for DynamicBatchSampler ease
     with open(f"{save_dir}/duration.json", "w", encoding="utf-8") as f:
