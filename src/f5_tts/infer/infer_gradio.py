@@ -959,16 +959,21 @@ with gr.Blocks() as app_credits:
 
 with gr.Blocks() as app:
     gr.Markdown(
-        """
-# Developer Jam Mazhar
+        f"""
+#Developer: Jam Mazhar
 
-[WhatsApp +923056797489](https://wa.me/923056797489)
+Any Query {"Whatsapp [+923056797489](https://github.com/SWivid/F5-TTS)" if not USING_SPACES else "an online demo for [F5-TTS](https://github.com/SWivid/F5-TTS)"} with advanced batch processing support. This app supports the following TTS models:
 
-**Terms and Conditions**
+* [F5-TTS](https://arxiv.org/abs/2410.06885) (A Fairytaler that Fakes Fluent and Faithful Speech with Flow Matching)
+* [E2 TTS](https://arxiv.org/abs/2406.18009) (Embarrassingly Easy Fully Non-Autoregressive Zero-Shot TTS)
 
-The F5-TT tool is free to use until you start earning from it. Once you generate income, you agree to pay 20% of your earnings as a fee. Continued use after earning means you accept this condition. The tool is provided "as is" without any guarantees or warranties. The creator reserves the right to update these terms at any time.
+The checkpoints currently support English and Chinese.
+
+If you're having issues, try converting your reference audio to WAV or MP3, clipping it to 12s with  ✂  in the bottom right corner (otherwise might have non-optimal auto-trimmed result).
+
+**NOTE: Reference text will be automatically transcribed with Whisper if not provided. For best results, keep your reference clips short (<12s). Ensure the audio is fully uploaded before generating.**
 """
-    )
+    ) 
 
     last_used_custom = files("f5_tts").joinpath("infer/.cache/last_used_custom_model_info_v1.txt")
 
