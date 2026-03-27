@@ -963,6 +963,10 @@ with gr.Blocks() as app:
 # Developer Jam Mazhar
 
 [WhatsApp +923056797489](https://wa.me/923056797489)
+
+**Terms and Conditions**
+
+The F5-TT tool is free to use until you start earning from it. Once you generate income, you agree to pay 20% of your earnings as a fee. Continued use after earning means you accept this condition. The tool is provided "as is" without any guarantees or warranties. The creator reserves the right to update these terms at any time.
 """
     )
 
