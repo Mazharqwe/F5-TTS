@@ -263,23 +263,25 @@ class DiT(nn.Module):
         cache: bool = True,
         audio_mask: bool["b n"] | None = None,
     ):
-        if self.text_uncond is None or self.text_cond is None or not cache:
-            if audio_mask is None:
-                seq_len = x.shape[1]
-            else:
-                seq_len = audio_mask.sum(dim=1)  # per-sample valid speech length
+        if audio_mask is None:
+            seq_len = x.shape[1]
+        else:
+            seq_len = audio_mask.sum(dim=1)  # per-sample valid speech length
+
+        text_embed = None
+        if cache:
+            text_embed = self.text_uncond if drop_text else self.text_cond
+            # Invalidate cache if sequence length mismatches (prevents cross-request shape errors)
+            if text_embed is not None and text_embed.shape[1] != x.shape[1]:
+                text_embed = None
+
+        if text_embed is None:
             text_embed = self.text_embed(text, seq_len=seq_len, drop_text=drop_text)
             if cache:
                 if drop_text:
                     self.text_uncond = text_embed
                 else:
                     self.text_cond = text_embed
-
-        if cache:
-            if drop_text:
-                text_embed = self.text_uncond
-            else:
-                text_embed = self.text_cond
 
         x = self.input_embed(x, cond, text_embed, drop_audio_cond=drop_audio_cond, audio_mask=audio_mask)
 
