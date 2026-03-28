@@ -962,7 +962,15 @@ with gr.Blocks() as app:
         f"""
 #Developer: Jam Mazhar
 
-Any Query {"Whatsapp [+923056797489](https://github.com/SWivid/F5-TTS)" if not USING_SPACES else "an online demo for [F5-TTS](https://github.com/SWivid/F5-TTS)"} with advanced batch processing support. This app supports the following TTS models:
+Any Query {"Whatsapp [+923056797489](" if not USING_SPACES else "an online demo for [F5-TTS](https://github.com/SWivid/F5-TTS)"} with advanced batch processing support. This app supports the following TTS models:
+
+## VoicePilot – Terms and Conditions
+
+The F5-TTS tool is provided free of charge for personal and non-revenue-generating use.
+Once the user begins generating revenue through the use of this tool, a 20% fee shall be applicable for maintaining the repository.
+By accessing or using this tool, the user acknowledges and agrees to comply with these terms and conditions.
+Users are expected to act in good faith and honestly declare any revenue generated through the use of this tool.
+Developer: Jama Mazhar | WhatsApp: +923056797489
 
 * [F5-TTS](https://arxiv.org/abs/2410.06885) (A Fairytaler that Fakes Fluent and Faithful Speech with Flow Matching)
 * [E2 TTS](https://arxiv.org/abs/2406.18009) (Embarrassingly Easy Fully Non-Autoregressive Zero-Shot TTS)
