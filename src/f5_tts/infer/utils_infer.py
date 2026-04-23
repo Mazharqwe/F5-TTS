@@ -375,7 +375,7 @@ def preprocess_ref_audio_text(ref_audio_orig, ref_text, show_info=print):
 
     print("\nref_text  ", ref_text)
 
-    return ref_audio
+    return ref_audio, ref_text
 
 
 # infer process: chunk text -> infer batches [i.e. infer_batch_process()]
@@ -403,9 +403,9 @@ def infer_process(
     audio, sr = torchaudio.load(ref_audio)
     max_chars = int(len(ref_text.encode("utf-8")) / (audio.shape[-1] / sr) * (22 - audio.shape[-1] / sr) * speed)
     gen_text_batches = chunk_text(gen_text, max_chars=max_chars)
-    # for i, gen_text_i in enumerate(gen_text_batches):
-    #     print(f"gen_text {i}", gen_text_i)
-    # print("\n")
+    for i, gen_text_i in enumerate(gen_text_batches):
+        print(f"gen_text {i}", gen_text_i)
+    print("\n")
 
     show_info(f"Generating audio in {len(gen_text_batches)} batches...")
 
